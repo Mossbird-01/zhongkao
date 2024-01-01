@@ -1,0 +1,56 @@
+<!DOCTYPE html>  
+<html>  
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<head>
+  <title>中考倒计时 By MossBird</title>
+  <embed src="解放者背景音乐.mp3" autoplay="true" loop="true" hidden="true"  ></embed>
+   <style> 
+    body {  
+      display: flex; 
+      justify-content: center;  
+      align-items: center;  
+      height: 100vh;  
+      margin: 0;  
+      background-color: #f1f1f1;  
+      font-family:"楷体";
+    }  
+  </style>  
+</head> 
+  <body> 
+  <font size="10" color="red"  <b>中考倒计时<b/><br/>
+  <body/>
+  <body>
+  <p id="countdown"></p>  
+  <script>  
+    // 设置目标日期  
+    var targetDate = new Date("2024-06-16T08:00:00");  
+  
+    // 更新倒计时每秒  
+    setInterval(function() {  
+      var now = new Date();  
+      var distance = targetDate - now;  
+  
+      // 计算时间差  
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));  
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));  
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));  
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);  
+  
+      // 显示倒计时  
+      document.getElementById("countdown").innerHTML = days + "天 " + hours + "小时 " + minutes + "分钟 " + seconds + "秒 ";  
+  
+      // 如果到达目标日期，显示相应消息  
+      if (distance < 0) {  
+        document.getElementById("countdown").innerHTML = "中考开始！";  
+      }  
+    }, 1000);  
+  </script>
+  
+  <font size ="8"  color="red" <p> 中考加油！<p/>
+ <body background="000.jpg"
+    style="background-repeat:no-repeat
+    background-attachment:fixed;
+    background-size:100% 100%; ">
+<audio autoplay="autoplay" loop="loop" preload="auto" src="解放者背景音乐.mp3" ></audio>
+</body>  
+</html>
